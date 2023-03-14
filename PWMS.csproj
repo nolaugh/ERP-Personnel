@@ -213,13 +213,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Image\登录.BMP" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Image\06.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Image\主界面.bmp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Image\01.png" />
@@ -241,6 +235,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Image\restart.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\登录.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\主界面.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

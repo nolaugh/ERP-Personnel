@@ -34,13 +34,6 @@
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tn_show = new System.Windows.Forms.TreeView();
             this.ms_tool = new System.Windows.Forms.MenuStrip();
-            this.人事档案管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.人事资料查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.员工合同提示ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.通讯录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.日常记事情ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.退出系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.重新登陆ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ms_basic = new System.Windows.Forms.MenuStrip();
             this.基础信息管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.基础数据ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,6 +68,13 @@
             this.系统退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.系统帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.人事档案管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.人事资料查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.员工合同提示ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.通讯录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.日常记事情ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.退出系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.重新登陆ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.status_bar.SuspendLayout();
             this.ms_tool.SuspendLayout();
@@ -139,62 +139,6 @@
             this.ms_tool.TabIndex = 3;
             this.ms_tool.Text = "menuStrip1";
             // 
-            // 人事档案管理ToolStripMenuItem
-            // 
-            this.人事档案管理ToolStripMenuItem.Image = global::PWMS.Properties.Resources._01;
-            this.人事档案管理ToolStripMenuItem.Name = "人事档案管理ToolStripMenuItem";
-            this.人事档案管理ToolStripMenuItem.Size = new System.Drawing.Size(133, 24);
-            this.人事档案管理ToolStripMenuItem.Text = "人事档案管理";
-            this.人事档案管理ToolStripMenuItem.Click += new System.EventHandler(this.人事档案管理ToolStripMenuItem_Click);
-            // 
-            // 人事资料查询ToolStripMenuItem
-            // 
-            this.人事资料查询ToolStripMenuItem.Image = global::PWMS.Properties.Resources._02;
-            this.人事资料查询ToolStripMenuItem.Name = "人事资料查询ToolStripMenuItem";
-            this.人事资料查询ToolStripMenuItem.Size = new System.Drawing.Size(133, 24);
-            this.人事资料查询ToolStripMenuItem.Text = "人事资料查询";
-            this.人事资料查询ToolStripMenuItem.Click += new System.EventHandler(this.人事资料查询ToolStripMenuItem_Click);
-            // 
-            // 员工合同提示ToolStripMenuItem
-            // 
-            this.员工合同提示ToolStripMenuItem.Image = global::PWMS.Properties.Resources._03;
-            this.员工合同提示ToolStripMenuItem.Name = "员工合同提示ToolStripMenuItem";
-            this.员工合同提示ToolStripMenuItem.Size = new System.Drawing.Size(133, 24);
-            this.员工合同提示ToolStripMenuItem.Text = "员工合同提示";
-            this.员工合同提示ToolStripMenuItem.Click += new System.EventHandler(this.员工合同提示ToolStripMenuItem_Click);
-            // 
-            // 通讯录ToolStripMenuItem
-            // 
-            this.通讯录ToolStripMenuItem.Image = global::PWMS.Properties.Resources._04;
-            this.通讯录ToolStripMenuItem.Name = "通讯录ToolStripMenuItem";
-            this.通讯录ToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
-            this.通讯录ToolStripMenuItem.Text = "通讯录";
-            this.通讯录ToolStripMenuItem.Click += new System.EventHandler(this.通讯录ToolStripMenuItem_Click);
-            // 
-            // 日常记事情ToolStripMenuItem
-            // 
-            this.日常记事情ToolStripMenuItem.Image = global::PWMS.Properties.Resources._05;
-            this.日常记事情ToolStripMenuItem.Name = "日常记事情ToolStripMenuItem";
-            this.日常记事情ToolStripMenuItem.Size = new System.Drawing.Size(103, 24);
-            this.日常记事情ToolStripMenuItem.Text = "日常记事";
-            this.日常记事情ToolStripMenuItem.Click += new System.EventHandler(this.日常记事ToolStripMenuItem_Click);
-            // 
-            // 退出系统ToolStripMenuItem
-            // 
-            this.退出系统ToolStripMenuItem.Image = global::PWMS.Properties.Resources._06;
-            this.退出系统ToolStripMenuItem.Name = "退出系统ToolStripMenuItem";
-            this.退出系统ToolStripMenuItem.Size = new System.Drawing.Size(103, 24);
-            this.退出系统ToolStripMenuItem.Text = "退出系统";
-            this.退出系统ToolStripMenuItem.Click += new System.EventHandler(this.退出系统ToolStripMenuItem_Click);
-            // 
-            // 重新登陆ToolStripMenuItem
-            // 
-            this.重新登陆ToolStripMenuItem.Image = global::PWMS.Properties.Resources.restart;
-            this.重新登陆ToolStripMenuItem.Name = "重新登陆ToolStripMenuItem";
-            this.重新登陆ToolStripMenuItem.Size = new System.Drawing.Size(103, 26);
-            this.重新登陆ToolStripMenuItem.Text = "重新登陆";
-            this.重新登陆ToolStripMenuItem.Click += new System.EventHandler(this.重新登陆ToolStripMenuItem_Click);
-            // 
             // ms_basic
             // 
             this.ms_basic.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -218,7 +162,7 @@
             this.基础数据ToolStripMenuItem,
             this.员工提示信息ToolStripMenuItem});
             this.基础信息管理ToolStripMenuItem.Name = "基础信息管理ToolStripMenuItem";
-            this.基础信息管理ToolStripMenuItem.Size = new System.Drawing.Size(113, 24);
+            this.基础信息管理ToolStripMenuItem.Size = new System.Drawing.Size(113, 26);
             this.基础信息管理ToolStripMenuItem.Text = "基础信息管理";
             // 
             // 基础数据ToolStripMenuItem
@@ -337,7 +281,7 @@
             this.日常记事ToolStripMenuItem,
             this.通讯录ToolStripMenuItem1});
             this.备忘记录ToolStripMenuItem.Name = "备忘记录ToolStripMenuItem";
-            this.备忘记录ToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
+            this.备忘记录ToolStripMenuItem.Size = new System.Drawing.Size(83, 26);
             this.备忘记录ToolStripMenuItem.Text = "备忘记录";
             // 
             // 日常记事ToolStripMenuItem
@@ -361,7 +305,7 @@
             this.人事资料查询ToolStripMenuItem1,
             this.人事资料统计ToolStripMenuItem});
             this.人事管理ToolStripMenuItem.Name = "人事管理ToolStripMenuItem";
-            this.人事管理ToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
+            this.人事管理ToolStripMenuItem.Size = new System.Drawing.Size(83, 26);
             this.人事管理ToolStripMenuItem.Text = "人事管理";
             // 
             // 人事档案管理ToolStripMenuItem1
@@ -391,7 +335,7 @@
             this.备份还原数据库ToolStripMenuItem,
             this.清空数据库ToolStripMenuItem});
             this.数据库维护ToolStripMenuItem.Name = "数据库维护ToolStripMenuItem";
-            this.数据库维护ToolStripMenuItem.Size = new System.Drawing.Size(98, 24);
+            this.数据库维护ToolStripMenuItem.Size = new System.Drawing.Size(98, 26);
             this.数据库维护ToolStripMenuItem.Text = "数据库维护";
             // 
             // 备份还原数据库ToolStripMenuItem
@@ -414,7 +358,7 @@
             this.记事本ToolStripMenuItem,
             this.记事本ToolStripMenuItem1});
             this.工具管理ToolStripMenuItem.Name = "工具管理ToolStripMenuItem";
-            this.工具管理ToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
+            this.工具管理ToolStripMenuItem.Size = new System.Drawing.Size(83, 26);
             this.工具管理ToolStripMenuItem.Text = "工具管理";
             // 
             // 记事本ToolStripMenuItem
@@ -437,7 +381,7 @@
             this.用户设置ToolStripMenuItem,
             this.系统退出ToolStripMenuItem});
             this.系统管理ToolStripMenuItem.Name = "系统管理ToolStripMenuItem";
-            this.系统管理ToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
+            this.系统管理ToolStripMenuItem.Size = new System.Drawing.Size(83, 26);
             this.系统管理ToolStripMenuItem.Text = "系统管理";
             // 
             // 用户设置ToolStripMenuItem
@@ -459,7 +403,7 @@
             this.帮助ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.系统帮助ToolStripMenuItem});
             this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
-            this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
+            this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(53, 26);
             this.帮助ToolStripMenuItem.Text = "帮助";
             // 
             // 系统帮助ToolStripMenuItem
@@ -469,10 +413,67 @@
             this.系统帮助ToolStripMenuItem.Text = "系统帮助";
             this.系统帮助ToolStripMenuItem.Click += new System.EventHandler(this.系统帮助ToolStripMenuItem_Click);
             // 
+            // 人事档案管理ToolStripMenuItem
+            // 
+            this.人事档案管理ToolStripMenuItem.Image = global::PWMS.Properties.Resources._01;
+            this.人事档案管理ToolStripMenuItem.Name = "人事档案管理ToolStripMenuItem";
+            this.人事档案管理ToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
+            this.人事档案管理ToolStripMenuItem.Text = "人事档案管理";
+            this.人事档案管理ToolStripMenuItem.Click += new System.EventHandler(this.人事档案管理ToolStripMenuItem_Click);
+            // 
+            // 人事资料查询ToolStripMenuItem
+            // 
+            this.人事资料查询ToolStripMenuItem.Image = global::PWMS.Properties.Resources._02;
+            this.人事资料查询ToolStripMenuItem.Name = "人事资料查询ToolStripMenuItem";
+            this.人事资料查询ToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
+            this.人事资料查询ToolStripMenuItem.Text = "人事资料查询";
+            this.人事资料查询ToolStripMenuItem.Click += new System.EventHandler(this.人事资料查询ToolStripMenuItem_Click);
+            // 
+            // 员工合同提示ToolStripMenuItem
+            // 
+            this.员工合同提示ToolStripMenuItem.Image = global::PWMS.Properties.Resources._03;
+            this.员工合同提示ToolStripMenuItem.Name = "员工合同提示ToolStripMenuItem";
+            this.员工合同提示ToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
+            this.员工合同提示ToolStripMenuItem.Text = "员工合同提示";
+            this.员工合同提示ToolStripMenuItem.Click += new System.EventHandler(this.员工合同提示ToolStripMenuItem_Click);
+            // 
+            // 通讯录ToolStripMenuItem
+            // 
+            this.通讯录ToolStripMenuItem.Image = global::PWMS.Properties.Resources._04;
+            this.通讯录ToolStripMenuItem.Name = "通讯录ToolStripMenuItem";
+            this.通讯录ToolStripMenuItem.Size = new System.Drawing.Size(88, 26);
+            this.通讯录ToolStripMenuItem.Text = "通讯录";
+            this.通讯录ToolStripMenuItem.Click += new System.EventHandler(this.通讯录ToolStripMenuItem_Click);
+            // 
+            // 日常记事情ToolStripMenuItem
+            // 
+            this.日常记事情ToolStripMenuItem.Image = global::PWMS.Properties.Resources._05;
+            this.日常记事情ToolStripMenuItem.Name = "日常记事情ToolStripMenuItem";
+            this.日常记事情ToolStripMenuItem.Size = new System.Drawing.Size(103, 26);
+            this.日常记事情ToolStripMenuItem.Text = "日常记事";
+            this.日常记事情ToolStripMenuItem.Click += new System.EventHandler(this.日常记事ToolStripMenuItem_Click);
+            // 
+            // 退出系统ToolStripMenuItem
+            // 
+            this.退出系统ToolStripMenuItem.Image = global::PWMS.Properties.Resources._06;
+            this.退出系统ToolStripMenuItem.Name = "退出系统ToolStripMenuItem";
+            this.退出系统ToolStripMenuItem.Size = new System.Drawing.Size(103, 26);
+            this.退出系统ToolStripMenuItem.Text = "退出系统";
+            this.退出系统ToolStripMenuItem.Click += new System.EventHandler(this.退出系统ToolStripMenuItem_Click);
+            // 
+            // 重新登陆ToolStripMenuItem
+            // 
+            this.重新登陆ToolStripMenuItem.Image = global::PWMS.Properties.Resources.restart;
+            this.重新登陆ToolStripMenuItem.Name = "重新登陆ToolStripMenuItem";
+            this.重新登陆ToolStripMenuItem.Size = new System.Drawing.Size(103, 26);
+            this.重新登陆ToolStripMenuItem.Text = "重新登陆";
+            this.重新登陆ToolStripMenuItem.Click += new System.EventHandler(this.重新登陆ToolStripMenuItem_Click);
+            // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImage = global::PWMS.Properties.Resources.主界面;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.ErrorImage = null;
-            this.pictureBox1.Image = global::PWMS.Properties.Resources.主界面;
             this.pictureBox1.Location = new System.Drawing.Point(273, 76);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";

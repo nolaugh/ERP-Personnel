@@ -267,7 +267,7 @@ namespace PWMS
         //系统帮助功能
         private void 系统帮助ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("请联系本人邮箱xxxxxx@qq.com！", "帮助");
+            MessageBox.Show("请联系本人邮箱chenyandusts@gmail！", "帮助");
         }
 
         //重新登录功能
