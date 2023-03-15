@@ -31,6 +31,7 @@ namespace PWMS
             MyMenu.GetMenu(tn_show, ms_basic);
             //设置用户权限开启功能
             MyMenu.MainPope(ms_basic, DataClass.MyMeans.Login_Name);
+            MyMenu.PactDay();
 ;        }
 
         //加载
@@ -188,13 +189,7 @@ namespace PWMS
         //员工合同提示功能
         private void 员工合同提示ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            MyMenu.Show_form(sender.ToString(), 2);
-        }
-
-        //员工生日提示功能
-        private void 员工生日提示ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MyMenu.Show_form(sender.ToString(), 2);
+            MyMenu.Show_form(sender.ToString(), 1);
         }
 
         //日常记事功能

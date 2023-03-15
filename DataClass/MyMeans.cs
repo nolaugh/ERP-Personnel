@@ -11,7 +11,7 @@ namespace PWMS.DataClass
         public static string Login_Name = "";//登录用户
         public static string Mean_SQL = "", Mean_Table = "", Mean_Field = "";//记录SQL，表格，添加及修改
         public static SqlConnection My_con;//sql连接字符串
-        public static string M_str_sqlcon = "Data Source=10.91.217.185;Database=db_PWMS;User id=sa;PWD=123";//登录地址
+        public static string M_str_sqlcon = "Data Source=.;Database=db_PWMS;User id=sa;PWD=123";//登录地址
         public static int Login_n = 0;//用户登录与重新登录标识
         public static string AllSql = "Select * from tb_Stuffbasic";//查询员工基本信息
         #endregion
