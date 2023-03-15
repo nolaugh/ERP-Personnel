@@ -285,5 +285,10 @@ namespace PWMS
             MyClass.getsqlcom("update tb_Login set Flag=0 where Name='" + DataClass.MyMeans.Login_Name + "'");
             Application.Exit();
         }
+
+        private void lbl_http_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/nolaugh/ERP-Personnel");
+        }
     }
 }
