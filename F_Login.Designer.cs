@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F_Login));
             this.btn_Login = new System.Windows.Forms.Button();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.lbl_name = new System.Windows.Forms.Label();
@@ -36,14 +37,14 @@
             this.txt_pwd = new System.Windows.Forms.TextBox();
             this.lbl_warning = new System.Windows.Forms.Label();
             this.lbl_enroll = new System.Windows.Forms.Label();
-            this.btn_exit = new System.Windows.Forms.Button();
             this.pic_login = new System.Windows.Forms.PictureBox();
+            this.lbl_exit = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pic_login)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Login
             // 
-            this.btn_Login.Location = new System.Drawing.Point(152, 328);
+            this.btn_Login.Location = new System.Drawing.Point(159, 304);
             this.btn_Login.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(100, 29);
@@ -54,7 +55,7 @@
             // 
             // btn_cancel
             // 
-            this.btn_cancel.Location = new System.Drawing.Point(353, 328);
+            this.btn_cancel.Location = new System.Drawing.Point(359, 304);
             this.btn_cancel.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(100, 29);
@@ -69,7 +70,7 @@
             this.lbl_name.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Bold);
             this.lbl_name.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lbl_name.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lbl_name.Location = new System.Drawing.Point(148, 222);
+            this.lbl_name.Location = new System.Drawing.Point(155, 198);
             this.lbl_name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_name.Name = "lbl_name";
             this.lbl_name.Size = new System.Drawing.Size(80, 17);
@@ -82,7 +83,7 @@
             this.lbl_pwd.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Bold);
             this.lbl_pwd.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lbl_pwd.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lbl_pwd.Location = new System.Drawing.Point(148, 277);
+            this.lbl_pwd.Location = new System.Drawing.Point(155, 253);
             this.lbl_pwd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_pwd.Name = "lbl_pwd";
             this.lbl_pwd.Size = new System.Drawing.Size(62, 17);
@@ -91,7 +92,7 @@
             // 
             // txt_name
             // 
-            this.txt_name.Location = new System.Drawing.Point(277, 219);
+            this.txt_name.Location = new System.Drawing.Point(284, 195);
             this.txt_name.Margin = new System.Windows.Forms.Padding(4);
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(175, 25);
@@ -101,7 +102,7 @@
             // 
             // txt_pwd
             // 
-            this.txt_pwd.Location = new System.Drawing.Point(277, 268);
+            this.txt_pwd.Location = new System.Drawing.Point(284, 244);
             this.txt_pwd.Margin = new System.Windows.Forms.Padding(4);
             this.txt_pwd.Name = "txt_pwd";
             this.txt_pwd.Size = new System.Drawing.Size(175, 25);
@@ -114,7 +115,7 @@
             this.lbl_warning.AutoSize = true;
             this.lbl_warning.Font = new System.Drawing.Font("宋体", 10F);
             this.lbl_warning.ForeColor = System.Drawing.Color.Red;
-            this.lbl_warning.Location = new System.Drawing.Point(274, 298);
+            this.lbl_warning.Location = new System.Drawing.Point(281, 274);
             this.lbl_warning.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_warning.Name = "lbl_warning";
             this.lbl_warning.Size = new System.Drawing.Size(0, 17);
@@ -125,7 +126,7 @@
             this.lbl_enroll.AutoSize = true;
             this.lbl_enroll.BackColor = System.Drawing.Color.Transparent;
             this.lbl_enroll.ForeColor = System.Drawing.Color.Blue;
-            this.lbl_enroll.Location = new System.Drawing.Point(166, 361);
+            this.lbl_enroll.Location = new System.Drawing.Point(173, 337);
             this.lbl_enroll.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_enroll.Name = "lbl_enroll";
             this.lbl_enroll.Size = new System.Drawing.Size(67, 15);
@@ -133,26 +134,11 @@
             this.lbl_enroll.Text = "点此注册";
             this.lbl_enroll.Click += new System.EventHandler(this.lbl_enroll_Click);
             // 
-            // btn_exit
-            // 
-            this.btn_exit.BackColor = System.Drawing.Color.White;
-            this.btn_exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_exit.FlatAppearance.BorderSize = 0;
-            this.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_exit.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_exit.Image = global::PWMS.Properties.Resources._06;
-            this.btn_exit.Location = new System.Drawing.Point(583, 0);
-            this.btn_exit.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(37, 32);
-            this.btn_exit.TabIndex = 3;
-            this.btn_exit.UseVisualStyleBackColor = false;
-            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
-            // 
             // pic_login
             // 
+            this.pic_login.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_login.BackgroundImage")));
+            this.pic_login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_login.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_login.Image = global::PWMS.Properties.Resources.登录;
             this.pic_login.Location = new System.Drawing.Point(0, 0);
             this.pic_login.Margin = new System.Windows.Forms.Padding(4);
             this.pic_login.Name = "pic_login";
@@ -161,18 +147,31 @@
             this.pic_login.TabIndex = 0;
             this.pic_login.TabStop = false;
             // 
+            // lbl_exit
+            // 
+            this.lbl_exit.AutoSize = true;
+            this.lbl_exit.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_exit.ForeColor = System.Drawing.Color.Blue;
+            this.lbl_exit.Location = new System.Drawing.Point(377, 337);
+            this.lbl_exit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_exit.Name = "lbl_exit";
+            this.lbl_exit.Size = new System.Drawing.Size(67, 15);
+            this.lbl_exit.TabIndex = 10;
+            this.lbl_exit.Text = "点此退出";
+            this.lbl_exit.Click += new System.EventHandler(this.lbl_exit_Click);
+            // 
             // F_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(620, 400);
+            this.Controls.Add(this.lbl_exit);
             this.Controls.Add(this.lbl_enroll);
             this.Controls.Add(this.lbl_warning);
             this.Controls.Add(this.txt_pwd);
             this.Controls.Add(this.txt_name);
             this.Controls.Add(this.lbl_pwd);
             this.Controls.Add(this.lbl_name);
-            this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_Login);
             this.Controls.Add(this.pic_login);
@@ -199,7 +198,7 @@
         private System.Windows.Forms.TextBox txt_pwd;
         private System.Windows.Forms.Label lbl_warning;
         private System.Windows.Forms.Label lbl_enroll;
-        private System.Windows.Forms.Button btn_exit;
+        private System.Windows.Forms.Label lbl_exit;
     }
 }
 

@@ -118,11 +118,6 @@ namespace PWMS
             }
         }
 
-        //关闭
-        private void btn_exit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
         //清空文本
         private void btn_cancel_Click(object sender, EventArgs e)
@@ -183,6 +178,11 @@ namespace PWMS
         private void txt_pwd_TextChanged(object sender, EventArgs e)
         {
             lbl_warning.Text = "";
+        }
+
+        private void lbl_exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
