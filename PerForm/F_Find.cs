@@ -180,16 +180,7 @@ namespace PWMS.PerForm
                 FindMC.Estimate_Date((MaskedTextBox)sender);
             }
 
-            bool TDate = FindMC.Estimate_Date((MaskedTextBox)sender);
-            if (TDate == true)
-                if (FindMC.Date_Format(Find1_WorkDate.Text) != "" && FindMC.Date_Format(Find2_WorkDate.Text) != "")
-                {
-                    if (Convert.ToDateTime(Find2_WorkDate.Text) <= Convert.ToDateTime(Find1_WorkDate.Text))
-                    {
-                        MessageBox.Show("结束日期必须大于它前一个日期。", "提示");
-                        Find2_WorkDate.Text = "";
-                    }  
-                }
+>>>>>>>>> Temporary merge branch 2
         }
     }
 }
