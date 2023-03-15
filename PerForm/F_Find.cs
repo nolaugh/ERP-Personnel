@@ -174,12 +174,11 @@ namespace PWMS.PerForm
 
         //离开工作结束时判断
         private void Find2_WorkDate_Leave(object sender, EventArgs e)
-        { 
+        {
             if (FindMC.Date_Format(Find1_WorkDate.Text) != "" && FindMC.Date_Format(Find2_WorkDate.Text) != "")
             {
                 FindMC.Estimate_Date((MaskedTextBox)sender);
             }
-
             bool TDate = FindMC.Estimate_Date((MaskedTextBox)sender);
             if (TDate == true)
                 if (FindMC.Date_Format(Find1_WorkDate.Text) != "" && FindMC.Date_Format(Find2_WorkDate.Text) != "")
@@ -188,7 +187,7 @@ namespace PWMS.PerForm
                     {
                         MessageBox.Show("结束日期必须大于它前一个日期。", "提示");
                         Find2_WorkDate.Text = "";
-                    }  
+                    }
                 }
         }
     }
