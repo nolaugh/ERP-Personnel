@@ -139,6 +139,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="SecondaryForm\F_Address.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecondaryForm\F_Address.Designer.cs">
+      <DependentUpon>F_Address.cs</DependentUpon>
+    </Compile>
     <Compile Include="SecondaryForm\F_Basic.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +197,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecondaryForm\F_Address.resx">
+      <DependentUpon>F_Address.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SecondaryForm\F_Basic.resx">
       <DependentUpon>F_Basic.cs</DependentUpon>
