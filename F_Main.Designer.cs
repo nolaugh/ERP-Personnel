@@ -55,7 +55,6 @@
             this.记事本类别设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.员工提示信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.员工合同提示ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.员工生日提示ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.备忘记录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.日常记事ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.通讯录ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,9 +74,9 @@
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.系统帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gb_menu = new System.Windows.Forms.GroupBox();
-            this.pb_main = new System.Windows.Forms.PictureBox();
-            this.tn_show = new System.Windows.Forms.TreeView();
             this.lbl_http = new System.Windows.Forms.Label();
+            this.tn_show = new System.Windows.Forms.TreeView();
+            this.pb_main = new System.Windows.Forms.PictureBox();
             this.status_bar.SuspendLayout();
             this.ms_tool.SuspendLayout();
             this.ms_basic.SuspendLayout();
@@ -184,7 +183,7 @@
             // 
             // 重新登陆ToolStripMenuItem
             // 
-            this.重新登陆ToolStripMenuItem.Image = global::PWMS.Properties.Resources.restart;
+            this.重新登陆ToolStripMenuItem.Image = global::PWMS.Properties.Resources.重启;
             this.重新登陆ToolStripMenuItem.Name = "重新登陆ToolStripMenuItem";
             this.重新登陆ToolStripMenuItem.Size = new System.Drawing.Size(103, 24);
             this.重新登陆ToolStripMenuItem.Text = "重新登陆";
@@ -306,10 +305,9 @@
             // 员工提示信息ToolStripMenuItem
             // 
             this.员工提示信息ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.员工合同提示ToolStripMenuItem1,
-            this.员工生日提示ToolStripMenuItem});
+            this.员工合同提示ToolStripMenuItem1});
             this.员工提示信息ToolStripMenuItem.Name = "员工提示信息ToolStripMenuItem";
-            this.员工提示信息ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
+            this.员工提示信息ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.员工提示信息ToolStripMenuItem.Text = "员工提示信息";
             // 
             // 员工合同提示ToolStripMenuItem1
@@ -318,13 +316,6 @@
             this.员工合同提示ToolStripMenuItem1.Size = new System.Drawing.Size(182, 26);
             this.员工合同提示ToolStripMenuItem1.Text = "员工合同提示";
             this.员工合同提示ToolStripMenuItem1.Click += new System.EventHandler(this.员工合同提示ToolStripMenuItem1_Click);
-            // 
-            // 员工生日提示ToolStripMenuItem
-            // 
-            this.员工生日提示ToolStripMenuItem.Name = "员工生日提示ToolStripMenuItem";
-            this.员工生日提示ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
-            this.员工生日提示ToolStripMenuItem.Text = "员工生日提示";
-            this.员工生日提示ToolStripMenuItem.Click += new System.EventHandler(this.员工生日提示ToolStripMenuItem_Click);
             // 
             // 备忘记录ToolStripMenuItem
             // 
@@ -469,44 +460,44 @@
             this.gb_menu.Controls.Add(this.lbl_http);
             this.gb_menu.Controls.Add(this.tn_show);
             this.gb_menu.Controls.Add(this.pb_main);
-            this.gb_menu.Location = new System.Drawing.Point(0, 59);
+            this.gb_menu.Location = new System.Drawing.Point(0, 69);
             this.gb_menu.Name = "gb_menu";
-            this.gb_menu.Size = new System.Drawing.Size(1067, 474);
+            this.gb_menu.Size = new System.Drawing.Size(1067, 464);
             this.gb_menu.TabIndex = 5;
             this.gb_menu.TabStop = false;
-            // 
-            // pb_main
-            // 
-            this.pb_main.BackgroundImage = global::PWMS.Properties.Resources.主界面;
-            this.pb_main.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pb_main.ErrorImage = null;
-            this.pb_main.Location = new System.Drawing.Point(274, 16);
-            this.pb_main.Margin = new System.Windows.Forms.Padding(4);
-            this.pb_main.Name = "pb_main";
-            this.pb_main.Size = new System.Drawing.Size(786, 451);
-            this.pb_main.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_main.TabIndex = 2;
-            this.pb_main.TabStop = false;
-            // 
-            // tn_show
-            // 
-            this.tn_show.Location = new System.Drawing.Point(7, 16);
-            this.tn_show.Margin = new System.Windows.Forms.Padding(4);
-            this.tn_show.Name = "tn_show";
-            this.tn_show.Size = new System.Drawing.Size(259, 451);
-            this.tn_show.TabIndex = 3;
             // 
             // lbl_http
             // 
             this.lbl_http.AutoSize = true;
             this.lbl_http.BackColor = System.Drawing.SystemColors.Control;
             this.lbl_http.ForeColor = System.Drawing.Color.Crimson;
-            this.lbl_http.Location = new System.Drawing.Point(673, 188);
+            this.lbl_http.Location = new System.Drawing.Point(676, 183);
             this.lbl_http.Name = "lbl_http";
             this.lbl_http.Size = new System.Drawing.Size(327, 15);
             this.lbl_http.TabIndex = 4;
             this.lbl_http.Text = "https://github.com/nolaugh/ERP-Personnel";
             this.lbl_http.Click += new System.EventHandler(this.lbl_http_Click);
+            // 
+            // tn_show
+            // 
+            this.tn_show.Location = new System.Drawing.Point(7, 15);
+            this.tn_show.Margin = new System.Windows.Forms.Padding(4);
+            this.tn_show.Name = "tn_show";
+            this.tn_show.Size = new System.Drawing.Size(259, 442);
+            this.tn_show.TabIndex = 3;
+            // 
+            // pb_main
+            // 
+            this.pb_main.BackgroundImage = global::PWMS.Properties.Resources.主界面;
+            this.pb_main.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pb_main.ErrorImage = null;
+            this.pb_main.Location = new System.Drawing.Point(281, 15);
+            this.pb_main.Margin = new System.Windows.Forms.Padding(4);
+            this.pb_main.Name = "pb_main";
+            this.pb_main.Size = new System.Drawing.Size(786, 442);
+            this.pb_main.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_main.TabIndex = 2;
+            this.pb_main.TabStop = false;
             // 
             // F_Main
             // 
@@ -584,7 +575,6 @@
         private System.Windows.Forms.ToolStripMenuItem 用户设置ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 系统退出ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 系统帮助ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 员工生日提示ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 重新登陆ToolStripMenuItem;
         private System.Windows.Forms.GroupBox gb_menu;
         private System.Windows.Forms.TreeView tn_show;

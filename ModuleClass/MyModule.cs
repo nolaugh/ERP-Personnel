@@ -9,8 +9,8 @@ using System.Linq;
 
 namespace PWMS.ModuleClass
 {
-     class MyModule
-     {
+    class MyModule
+    {
         #region 公共变量
         DataClass.MyMeans MyDataClass = new PWMS.DataClass.MyMeans();//调用Mymean
         public static string ADDs = "";//存储sql
@@ -27,7 +27,7 @@ namespace PWMS.ModuleClass
         ///</sunmmary> 
         ///<param name="FrmName">调用窗体的text属性值</param>
         ///<param name="n">标识</param>
-        public void Show_form(string FrmName,int n)
+        public void Show_form(string FrmName, int n)
         {
             if (n == 1)
             {
@@ -66,115 +66,93 @@ namespace PWMS.ModuleClass
                     f_WordPad.ShowDialog();
                     f_WordPad.Dispose();
                 }
-
-
             }
             if (n == 2)
             {
-                if (FrmName == "员工生日提示" || FrmName == "员工合同提示")
+                String Frmstr = "";//记录窗口名称
+                if (FrmName == "民族类别设置")
                 {
-                    if (FrmName == "员工生日提示")
-                    {
-                        SecondaryForm.F_ClewSet FrmClewSet = new PWMS.SecondaryForm.F_ClewSet();
-                        FrmClewSet.Text = "员工生日提示";
-                        FrmClewSet.ShowDialog();
-                        FrmClewSet.Dispose();
-                    }
-                    if (FrmName == "员工合同提示")
-                    {
-                        SecondaryForm.F_ClewSet FrmClewSet = new PWMS.SecondaryForm.F_ClewSet();
-                        FrmClewSet.Text = "员工合同提示";
-                        FrmClewSet.ShowDialog();
-                        FrmClewSet.Dispose();
-                    }
+                    DataClass.MyMeans.Mean_SQL = "select * from tb_Folk ";
+                    DataClass.MyMeans.Mean_Table = "tb_Folk";
+                    DataClass.MyMeans.Mean_Field = "FolkName";
+                    Frmstr = FrmName;
                 }
-                else
+
+                if (FrmName == "职工类别设置")
                 {
-                    String Frmstr = "";//记录窗口名称
-                    if (FrmName == "民族类别设置")
-                    {
-                        DataClass.MyMeans.Mean_SQL = "select * from tb_Folk ";
-                        DataClass.MyMeans.Mean_Table = "tb_Folk";
-                        DataClass.MyMeans.Mean_Field = "FolkName";
-                        Frmstr = FrmName;
-                    }
-
-                    if (FrmName == "职工类别设置")
-                    {
-                        DataClass.MyMeans.Mean_SQL = "select * from tb_EmployeeGenre";
-                        DataClass.MyMeans.Mean_Table = "tb_EmployeeGenre";
-                        DataClass.MyMeans.Mean_Field = "EmployeeName";
-                        Frmstr = FrmName;
-                    }
-
-                    if (FrmName == "文化程度设置")
-                    {
-                        DataClass.MyMeans.Mean_SQL = "select * from tb_Kultur";
-                        DataClass.MyMeans.Mean_Table = "tb_Kultur";
-                        DataClass.MyMeans.Mean_Field = "KulturName";
-                        Frmstr = FrmName;
-                    }
-
-                    if (FrmName == "政治面貌设置")
-                    {
-                        DataClass.MyMeans.Mean_SQL = "select * from tb_Visage";
-                        DataClass.MyMeans.Mean_Table = "tb_Visage";
-                        DataClass.MyMeans.Mean_Field = "VisageName";
-                        Frmstr = FrmName;
-                    }
-
-                    if (FrmName == "部门类别设置")
-                    {
-                        DataClass.MyMeans.Mean_SQL = "select * from tb_Branch";
-                        DataClass.MyMeans.Mean_Table = "tb_Branch";
-                        DataClass.MyMeans.Mean_Field = "BranchName";
-                        Frmstr = FrmName;
-                    }
-
-                    if (FrmName == "工资类别设置")
-                    {
-                        DataClass.MyMeans.Mean_SQL = "select * from tb_Laborage";
-                        DataClass.MyMeans.Mean_Table = "tb_Laborage";
-                        DataClass.MyMeans.Mean_Field = "LaborageName";
-                        Frmstr = FrmName;
-                    }
-
-                    if (FrmName == "职务类别设置")
-                    {
-                        DataClass.MyMeans.Mean_SQL = "select * from tb_Business";
-                        DataClass.MyMeans.Mean_Table = "tb_Business";
-                        DataClass.MyMeans.Mean_Field = "BusinessName";
-                        Frmstr = FrmName;
-                    }
-
-                    if (FrmName == "职称类别设置")
-                    {
-                        DataClass.MyMeans.Mean_SQL = "select * from tb_Duthcall";
-                        DataClass.MyMeans.Mean_Table = "tb_Duthcall";
-                        DataClass.MyMeans.Mean_Field = "DuthcallName";
-                        Frmstr = FrmName;
-                    }
-
-                    if (FrmName == "奖惩类别设置")
-                    {
-                        DataClass.MyMeans.Mean_SQL = "select * from tb_RPKind";
-                        DataClass.MyMeans.Mean_Table = "tb_RPKind";
-                        DataClass.MyMeans.Mean_Field = "RPKind";
-                        Frmstr = FrmName;
-                    }
-
-                    if (FrmName == "记事本类别设置")
-                    {
-                        DataClass.MyMeans.Mean_SQL = "select * from tb_WordPad";
-                        DataClass.MyMeans.Mean_Table = "tb_WordPad";
-                        DataClass.MyMeans.Mean_Field = "WordPad";
-                        Frmstr = FrmName;
-                    }
-                    SecondaryForm.F_Basic f_Basic = new PWMS.SecondaryForm.F_Basic();
-                    f_Basic.Text = Frmstr;
-                    f_Basic.ShowDialog();
-                    f_Basic.Dispose();
+                    DataClass.MyMeans.Mean_SQL = "select * from tb_EmployeeGenre";
+                    DataClass.MyMeans.Mean_Table = "tb_EmployeeGenre";
+                    DataClass.MyMeans.Mean_Field = "EmployeeName";
+                    Frmstr = FrmName;
                 }
+
+                if (FrmName == "文化程度设置")
+                {
+                    DataClass.MyMeans.Mean_SQL = "select * from tb_Kultur";
+                    DataClass.MyMeans.Mean_Table = "tb_Kultur";
+                    DataClass.MyMeans.Mean_Field = "KulturName";
+                    Frmstr = FrmName;
+                }
+
+                if (FrmName == "政治面貌设置")
+                {
+                    DataClass.MyMeans.Mean_SQL = "select * from tb_Visage";
+                    DataClass.MyMeans.Mean_Table = "tb_Visage";
+                    DataClass.MyMeans.Mean_Field = "VisageName";
+                    Frmstr = FrmName;
+                }
+
+                if (FrmName == "部门类别设置")
+                {
+                    DataClass.MyMeans.Mean_SQL = "select * from tb_Branch";
+                    DataClass.MyMeans.Mean_Table = "tb_Branch";
+                    DataClass.MyMeans.Mean_Field = "BranchName";
+                    Frmstr = FrmName;
+                }
+
+                if (FrmName == "工资类别设置")
+                {
+                    DataClass.MyMeans.Mean_SQL = "select * from tb_Laborage";
+                    DataClass.MyMeans.Mean_Table = "tb_Laborage";
+                    DataClass.MyMeans.Mean_Field = "LaborageName";
+                    Frmstr = FrmName;
+                }
+
+                if (FrmName == "职务类别设置")
+                {
+                    DataClass.MyMeans.Mean_SQL = "select * from tb_Business";
+                    DataClass.MyMeans.Mean_Table = "tb_Business";
+                    DataClass.MyMeans.Mean_Field = "BusinessName";
+                    Frmstr = FrmName;
+                }
+
+                if (FrmName == "职称类别设置")
+                {
+                    DataClass.MyMeans.Mean_SQL = "select * from tb_Duthcall";
+                    DataClass.MyMeans.Mean_Table = "tb_Duthcall";
+                    DataClass.MyMeans.Mean_Field = "DuthcallName";
+                    Frmstr = FrmName;
+                }
+
+                if (FrmName == "奖惩类别设置")
+                {
+                    DataClass.MyMeans.Mean_SQL = "select * from tb_RPKind";
+                    DataClass.MyMeans.Mean_Table = "tb_RPKind";
+                    DataClass.MyMeans.Mean_Field = "RPKind";
+                    Frmstr = FrmName;
+                }
+
+                if (FrmName == "记事本类别设置")
+                {
+                    DataClass.MyMeans.Mean_SQL = "select * from tb_WordPad";
+                    DataClass.MyMeans.Mean_Table = "tb_WordPad";
+                    DataClass.MyMeans.Mean_Field = "WordPad";
+                    Frmstr = FrmName;
+                }
+                SecondaryForm.F_Basic f_Basic = new PWMS.SecondaryForm.F_Basic();
+                f_Basic.Text = Frmstr;
+                f_Basic.ShowDialog();
+                f_Basic.Dispose();
             }
             if (n == 3)
             {
@@ -240,9 +218,9 @@ namespace PWMS.ModuleClass
                     {
                         System.Diagnostics.Process.Start("calc.exe");
                     }
-                    catch(Exception ex)
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("请检查系统中是否存在计算器程序！"+ex);
+                        MessageBox.Show("请检查系统中是否存在计算器程序！" + ex);
                     }
                 }
 
@@ -255,7 +233,7 @@ namespace PWMS.ModuleClass
                     catch (Exception ex)
                     {
                         MessageBox.Show("请检查系统中是否存在记事本程序！" + ex);
-                    }  
+                    }
                 }
 
                 if (FrmName == "用户设置")
@@ -310,7 +288,7 @@ namespace PWMS.ModuleClass
                             }
                         }
                     }
-                }  
+                }
             }
         }
 
@@ -431,8 +409,8 @@ namespace PWMS.ModuleClass
         /// <param name="MTBox">控件名称</param>
         public void MaskedTextBox_Format(MaskedTextBox MTBox)
         {
-                MTBox.Mask = "0000-00-00";
-                MTBox.ValidatingType = typeof(System.DateTime);
+            MTBox.Mask = "0000-00-00";
+            MTBox.ValidatingType = typeof(System.DateTime);
         }
         #endregion
 
@@ -521,7 +499,7 @@ namespace PWMS.ModuleClass
                 sID = TName + i.ToString();
                 foreach (Control C in GBox)
                 {
-                    if (C.GetType().Name == "TextBox" || C.GetType().Name== "MaskedTextBox")
+                    if (C.GetType().Name == "TextBox" || C.GetType().Name == "MaskedTextBox")
                         if (C.Name == sID)
                         {
                             C.Text = "";
@@ -657,7 +635,7 @@ namespace PWMS.ModuleClass
                 {
                     tem_Value = "Stu_ID='" + ID1 + "',ID='" + ID2 + "'";
                 }
-                    
+
             }
 
             if (m > 0)
@@ -730,13 +708,13 @@ namespace PWMS.ModuleClass
         /// <param name="BoxName">要搜索的控件名称</param>
         /// <param name="n">控件个数</param>
         /// <param name="flag">控件状态</param>
-        public void allreadonly(Control.ControlCollection Contr, string BoxName, int n,bool flag)
+        public void allreadonly(Control.ControlCollection Contr, string BoxName, int n, bool flag)
         {
             for (int i = 0; i < n; i++)
             {
                 foreach (Control C in Contr)
                 {
-                 
+
                     if (C.GetType().Name == "TextBox" || C.GetType().Name == "MaskedTextBox" || C.GetType().Name == "ComboBox")
                     {
                         if (C.Name == "S_0")
@@ -766,7 +744,7 @@ namespace PWMS.ModuleClass
             {
                 foreach (Control C in Gbox)
                 {
-                    if (C.GetType().Name == "TextBox" || C.GetType().Name == "MaskedTextBox"|| C.GetType().Name == "ComboBox")
+                    if (C.GetType().Name == "TextBox" || C.GetType().Name == "MaskedTextBox" || C.GetType().Name == "ComboBox")
                     {
                         {
                             C.Enabled = flag;
@@ -785,14 +763,14 @@ namespace PWMS.ModuleClass
         /// <param name="min">进度条最小值</param>
         /// <param name="max">进度条最大值</param>
         /// <param name="step">进度条递增值</param>
-        public void pcbusing(ProgressBar pcb,int min,int max,int step)
+        public void pcbusing(ProgressBar pcb, int min, int max, int step)
         {
             pcb.Visible = true;
             pcb.Minimum = min;
-            pcb.Maximum = max; 
+            pcb.Maximum = max;
             pcb.Value = 0;
             pcb.Step = step;
-            for (; min < max; min=min + step)
+            for (; min < max; min = min + step)
             {
                 System.Threading.Thread.Sleep(100);
                 pcb.PerformStep();
@@ -910,7 +888,7 @@ namespace PWMS.ModuleClass
             catch
             {
                 MTbox.Text = "";
-                MessageBox.Show("日期输入错误或未填写完整，请重新输入！","提示");
+                MessageBox.Show("日期输入错误或未填写完整，请重新输入！", "提示");
                 return false;
             }
         }
@@ -1024,5 +1002,39 @@ namespace PWMS.ModuleClass
         }
         #endregion
         //-------------------------------F_Find
-    }
+
+
+        //-------------------------------F_ClewSet
+        #region  查询指定范围内生日与合同到期的职工
+        /// <summary>
+        /// 查询指定范围内生日与合同到期的职工.
+        /// </summary>
+        public void PactDay()
+        {
+            DataSet DSet = MyDataClass.getDataSet("select Fate from tb_Clew ", "tb_clew");
+            if (DSet.Tables[0].Rows.Count > 0)
+            {
+                string Vfield = "";
+                string dSQL = "";
+                int sday = Convert.ToInt32(DSet.Tables[0].Rows[0][0]);
+                Vfield = "Pact_E";
+                dSQL = "select * from tb_Stuffbasic where ((getdate()-convert(Nvarchar(12)," + Vfield + ",110))>=-" + sday + " and (getdate()-convert(Nvarchar(12)," + Vfield + ",110))<=0)";
+
+                DSet = MyDataClass.getDataSet(dSQL, "tb_Stuffbasic");
+                if (DSet.Tables[0].Rows.Count > 0)
+                {
+                    Vfield = "是否查看" + sday.ToString() + "天内合同到期的职工信息？";
+                    if (MessageBox.Show(Vfield, "提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                    {
+                        Show_form("员工合同提示", 1);
+                    }
+                }
+
+            }
+            #endregion
+            //-------------------------------F_ClewSet
+
+        } 
+    } 
 }
+
