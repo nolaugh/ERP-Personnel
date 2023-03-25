@@ -547,7 +547,7 @@ namespace PWMS.PerForm
         //添加-职工基本信息    
         private void btn_insert_Click(object sender, EventArgs e)
         {
-            hold_n = 2;
+            hold_n = 1;
             Myformat.Clear_Control(tbp_basic.Controls);
             S_0.Text = Myformat.GetAutocoding("tb_StuffBasic", "ID");
             Myformat.Ena_Button(btn_insert, btn_update, btn_cancel, btn_save, 0, 0, 1, 1);

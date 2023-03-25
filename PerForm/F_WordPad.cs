@@ -30,6 +30,7 @@ namespace PWMS.PerForm
         //加载
         private void F_WordPad_Load(object sender, EventArgs e)
         {
+            this.MaximizeBox = false;
             WordPad_1.Enabled = false;
             dtp_time.Value = DateTime.Today;
             MyDS_Grid = MyDataClass.getDataSet(AllSql, "tb_DayWordPad");
@@ -236,6 +237,26 @@ namespace PWMS.PerForm
                 gb_select.Enabled=true;
                 checkb_all.Enabled=true;
             }
+        }
+
+        //保存
+        private void btn_Wsave_Click(object sender, EventArgs e)
+        {
+            string All_Field = "";
+            string All_Value = "";
+
+            if (Word_S == 1)
+            {
+                All_Field = "ID,BlotterDate,BlotterSort,Motif,Wordpad";
+                All_Value = "'" + Word_ID + "'," + "'" + MyMC.Date_Format(WordPad_1.Text) + "'," + "'" + WordPad_2.Text + "'," + "'" + WordPad_3.Text + "'," + "'" + WordPad_4.Text + "'";
+                MyDataClass.getsqlcom("insert into tb_DayWordPad (" + All_Field + ") values(" + All_Value + ")");
+            }
+            if (Word_S == 2)
+            {
+                All_Value = "ID='" + Word_ID + "'," + "BlotterDate='" + MyMC.Date_Format(WordPad_1.Text) + "'," + "BlotterSort='" + WordPad_2.Text + "'," + "Motif='" + WordPad_3.Text + "'," + "Wordpad='" + WordPad_4.Text + "'";
+                MyDataClass.getsqlcom("update tb_DayWordPad set " + All_Value + " where ID='" + Word_ID + "'");
+            }
+            btn_Wcancel_Click(sender, e);
         }
     }
 }

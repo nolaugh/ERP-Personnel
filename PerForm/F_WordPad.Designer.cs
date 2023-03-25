@@ -84,6 +84,7 @@
             this.btn_Wsave.TabIndex = 4;
             this.btn_Wsave.Text = "保存";
             this.btn_Wsave.UseVisualStyleBackColor = true;
+            this.btn_Wsave.Click += new System.EventHandler(this.btn_Wsave_Click);
             // 
             // btn_Wcancel
             // 
@@ -344,7 +345,8 @@
             this.Controls.Add(this.gb_word);
             this.Controls.Add(this.gb_information);
             this.Controls.Add(this.gb_select);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "F_WordPad";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "记事本";

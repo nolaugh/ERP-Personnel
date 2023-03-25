@@ -22,6 +22,7 @@ namespace PWMS.PerForm
 
         private void F_ClewSet_Load(object sender, EventArgs e)
         {
+            this.MaximizeBox = false;
             DataSet DSet = MyDataClass.getDataSet("select Fate from tb_Clew", "tb_clew");
             int sday = Convert.ToInt32(DSet.Tables[0].Rows[0][0]);
             nud_day.Value = sday;

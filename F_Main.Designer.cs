@@ -307,7 +307,7 @@
             this.员工提示信息ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.员工合同提示ToolStripMenuItem1});
             this.员工提示信息ToolStripMenuItem.Name = "员工提示信息ToolStripMenuItem";
-            this.员工提示信息ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.员工提示信息ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
             this.员工提示信息ToolStripMenuItem.Text = "员工提示信息";
             // 
             // 员工合同提示ToolStripMenuItem1
@@ -471,11 +471,11 @@
             this.lbl_http.AutoSize = true;
             this.lbl_http.BackColor = System.Drawing.SystemColors.Control;
             this.lbl_http.ForeColor = System.Drawing.Color.Crimson;
-            this.lbl_http.Location = new System.Drawing.Point(676, 183);
+            this.lbl_http.Location = new System.Drawing.Point(630, 185);
             this.lbl_http.Name = "lbl_http";
-            this.lbl_http.Size = new System.Drawing.Size(327, 15);
+            this.lbl_http.Size = new System.Drawing.Size(425, 15);
             this.lbl_http.TabIndex = 4;
-            this.lbl_http.Text = "https://github.com/nolaugh/ERP-Personnel";
+            this.lbl_http.Text = "点此链接跳转:https://github.com/nolaugh/ERP-Personnel";
             this.lbl_http.Click += new System.EventHandler(this.lbl_http_Click);
             // 
             // tn_show

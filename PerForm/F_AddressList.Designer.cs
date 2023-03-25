@@ -226,6 +226,7 @@
             this.Controls.Add(this.gb_dgv);
             this.Controls.Add(this.gb_use);
             this.Controls.Add(this.gb_select);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "F_AddressList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
