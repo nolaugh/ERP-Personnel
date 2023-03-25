@@ -62,7 +62,7 @@ namespace PWMS.PerForm
             MyDS_Grid = MyDataClass.getDataSet(DataClass.MyMeans.AllSql, "tb_Stuffbasic");
             dgv_show.DataSource = MyDS_Grid.Tables[0];
             //是否自动创建列
-            dgv_show.AutoGenerateColumns = true;  
+            dgv_show.AutoGenerateColumns = true;
             //列宽
             dgv_show.Columns[0].Width = 60;
             dgv_show.Columns[1].Width = 80;
@@ -95,7 +95,7 @@ namespace PWMS.PerForm
             #endregion
 
             //隐藏dgv_show控件中不需要的列字段
-            for (int i = 2; i < dgv_show.ColumnCount; i++)  
+            for (int i = 2; i < dgv_show.ColumnCount; i++)
             {
                 dgv_show.Columns[i].Visible = false;
             }
@@ -183,7 +183,7 @@ namespace PWMS.PerForm
             //查询满足条件的数据
             MyDS_Grid = MyDataClass.getDataSet("Select * from tb_Stuffbasic where " + tem_Field + "='" + tem_Value + "'", "tb_Stuffbasic");
             dgv_show.DataSource = MyDS_Grid.Tables[0];
-            lbl_show.Text = txtchange(dgv_show);  
+            lbl_show.Text = txtchange(dgv_show);
             dgv_show.Enabled = true;
             btn_delete.Enabled = true;
             if (dgv_show.RowCount < 1)
@@ -339,7 +339,7 @@ namespace PWMS.PerForm
                 dgv_show.Columns[1].Width = 80;
                 btn_delete.Enabled = true;
                 //隐藏dataGridView1控件中不需要的列字段
-                for (int i = 2; i < dgv_show.ColumnCount; i++)  
+                for (int i = 2; i < dgv_show.ColumnCount; i++)
                 {
                     dgv_show.Columns[i].Visible = false;
                 }
@@ -472,7 +472,7 @@ namespace PWMS.PerForm
                     {
                         Myformat.Clear_Grids(RDset.Tables[0].Columns.Count, gb_reward.Controls, "R_");
                     }
-                        
+
 
                     //个人评价
                     SqlDataReader Read_Memo = MyDataClass.getcom("Select * from tb_Individual where ID='" + tem_ID + "'");
@@ -483,7 +483,7 @@ namespace PWMS.PerForm
                     else
                     {
                         Ind_Mome.Clear();
-                    }   
+                    }
                 }
             }
             catch (Exception ex)
@@ -558,74 +558,90 @@ namespace PWMS.PerForm
             Myformat.allreadonly(tabc_menu.TabPages[0].Controls, "S_", 30, true);
             dgv_show.Enabled = false;
             gb_read.Enabled = false;
-            gb_select.Enabled = false;  
+            gb_select.Enabled = false;
         }
 
         //修改-职工基本信息
         private void btn_update_Click(object sender, EventArgs e)
         {
-            hold_n = 2;
-            Myformat.Ena_Button(btn_insert, btn_update, btn_cancel, btn_save, 0, 0, 1, 1);
-            status_bar.Items[4].Text = "正在修改数据...";
-            btn_choose.Enabled = true;
-            btn_clear.Enabled = true;
-            btn_delete.Enabled = false;
-            Myformat.allreadonly(tabc_menu.TabPages[0].Controls, "S_", 30, true);
-            dgv_show.Enabled = false;
-            gb_read.Enabled = false;
-            gb_select.Enabled = false;
+            if (dgv_show.Rows.Count > 0)
+            {
+                hold_n = 2;
+                Myformat.Ena_Button(btn_insert, btn_update, btn_cancel, btn_save, 0, 0, 1, 1);
+                status_bar.Items[4].Text = "正在修改数据...";
+                btn_choose.Enabled = true;
+                btn_clear.Enabled = true;
+                btn_delete.Enabled = false;
+                Myformat.allreadonly(tabc_menu.TabPages[0].Controls, "S_", 30, true);
+                dgv_show.Enabled = false;
+                gb_read.Enabled = false;
+                gb_select.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("当前无数据！", "提示");
+            }
+
         }
 
         //删除-职工基本信息
         private void btn_delete_Click(object sender, EventArgs e)
         {
-            status_bar.Items[4].Text = "正在删除数据...";
-            DialogResult result = MessageBox.Show("是否确认删除？", "提示", MessageBoxButtons.OKCancel);
-            if (dgv_show.CurrentRow.Index == 0)
+            if (dgv_show.Rows.Count > 0)
             {
-                MessageBox.Show("首条记录无法删除！", "提示");
-                status_bar.Items[4].Text = "无";
-                return;
-            }
-
-            if (dgv_show.CurrentRow.Index != dgv_show.Rows.Count - 1)
-            {
-                MessageBox.Show("无法从中删除，请选择修改！", "提示");
-                status_bar.Items[4].Text = "无";
-                return;
-            }
-
-            if (dgv_show.RowCount < 2)
-            {
-                MessageBox.Show("当前已是最后一条！无法删除！", "提示");
-                status_bar.Items[4].Text = "无";
-                return;
-            }
-            else
-            {
-                if (result == DialogResult.OK)
+                status_bar.Items[4].Text = "正在删除数据...";
+                DialogResult result = MessageBox.Show("是否确认删除？", "提示", MessageBoxButtons.OKCancel);
+                if (dgv_show.CurrentRow.Index == 0)
                 {
-                    MessageBox.Show("删除成功！", "提示");
-                    MyDataClass.getsqlcom("Delete tb_Stuffbasic where ID='" + S_0.Text.Trim() + "'");
-                    MyDataClass.getsqlcom("Delete tb_WordResume where Stu_ID='" + S_0.Text.Trim() + "'");
-                    MyDataClass.getsqlcom("Delete tb_Family where Stu_ID='" + S_0.Text.Trim() + "'");
-                    MyDataClass.getsqlcom("Delete tb_TrainNote where Stu_ID='" + S_0.Text.Trim() + "'");
-                    MyDataClass.getsqlcom("Delete tb_RANDP where Stu_ID='" + S_0.Text.Trim() + "'");
-                    MyDataClass.getsqlcom("Delete tb_WordResume where Stu_ID='" + S_0.Text.Trim() + "'");
-                    MyDataClass.getsqlcom("Delete tb_Individual where ID='" + S_0.Text.Trim() + "'");
-                    btn_cancel_Click(sender, e);
+                    MessageBox.Show("首条记录无法删除！", "提示");
+                    status_bar.Items[4].Text = "无";
+                    return;
+                }
+
+                if (dgv_show.CurrentRow.Index != dgv_show.Rows.Count - 1)
+                {
+                    MessageBox.Show("无法从中删除，请选择修改！", "提示");
+                    status_bar.Items[4].Text = "无";
+                    return;
+                }
+
+                if (dgv_show.RowCount < 2)
+                {
+                    MessageBox.Show("当前已是最后一条！无法删除！", "提示");
+                    status_bar.Items[4].Text = "无";
+                    return;
                 }
                 else
                 {
-                    MessageBox.Show("您选择了取消删除！", "提示");
-                    status_bar.Items[4].Text = "无";
+                    if (result == DialogResult.OK)
+                    {
+                        MessageBox.Show("删除成功！", "提示");
+                        MyDataClass.getsqlcom("Delete tb_Stuffbasic where ID='" + S_0.Text.Trim() + "'");
+                        MyDataClass.getsqlcom("Delete tb_WordResume where Stu_ID='" + S_0.Text.Trim() + "'");
+                        MyDataClass.getsqlcom("Delete tb_Family where Stu_ID='" + S_0.Text.Trim() + "'");
+                        MyDataClass.getsqlcom("Delete tb_TrainNote where Stu_ID='" + S_0.Text.Trim() + "'");
+                        MyDataClass.getsqlcom("Delete tb_RANDP where Stu_ID='" + S_0.Text.Trim() + "'");
+                        MyDataClass.getsqlcom("Delete tb_WordResume where Stu_ID='" + S_0.Text.Trim() + "'");
+                        MyDataClass.getsqlcom("Delete tb_Individual where ID='" + S_0.Text.Trim() + "'");
+                        btn_cancel_Click(sender, e);
+                    }
+                    else
+                    {
+                        MessageBox.Show("您选择了取消删除！", "提示");
+                        status_bar.Items[4].Text = "无";
+                    }
                 }
+            }
+            else
+            {
+                MessageBox.Show("当前无数据！", "提示");
             }
         }
 
         //取消-职工基本信息
         private void btn_cancel_Click(object sender, EventArgs e)
         {
+            tem_Field = "";
             hold_n = 0;
             Ima_n = 0;
             Myformat.Ena_Button(btn_insert, btn_update, btn_cancel, btn_save, 1, 1, 0, 0);
@@ -651,7 +667,7 @@ namespace PWMS.PerForm
             Myformat.pcbusing(pcb_basic, 0, 100, 20);
             try
             {
-                if (hold_n == 1||hold_n == 2)
+                if (hold_n == 1 || hold_n == 2)
                 {
                     ModuleClass.MyModule.ADDs = "";
                     string All_Field = "ID,StuffName,Folk,Birthday,Age,Sex,Marriage,Kultur,Visage,IDCard,Workdate,WorkLength,BeAware,City,Laborage,Business,Branch,Duthcall,Employee,Pact_B,Pact_E,Pact_Y,Phone,Handset,GraduateDate,School,Speciality,Address,M_Pay,Bank";
@@ -748,7 +764,7 @@ namespace PWMS.PerForm
                 {
                     try
                     {
-                        if (judge1==1)
+                        if (judge1 == 1)
                         {
                             ShowData_Image((byte[])(MyDS_Grid.Tables[0].Rows[i][23]), pb_stuff);
                             pb_stuff.Image.Save(@"D:\PWMS\Stuffimageword\" + MyDS_Grid.Tables[0].Rows[i][1] + ".jpg");    //将图片存入到指定的路径
@@ -928,7 +944,7 @@ namespace PWMS.PerForm
                     }
                     wordDoc.Save();
                 }
-                DialogResult result= MessageBox.Show("基本信息表导出到WORD成功，位置: D:\\PWMS\\WORD", "提示");
+                DialogResult result = MessageBox.Show("基本信息表导出到WORD成功，位置: D:\\PWMS\\WORD", "提示");
                 if (result == DialogResult.OK)
                 {
                     wordDoc.Close();
@@ -938,11 +954,11 @@ namespace PWMS.PerForm
                 status_bar.Items[4].Text = "null";
                 #endregion
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show(ex+"导出失败！请检查是否为microsoft office2019及以下版本！", "提示");
+                MessageBox.Show(ex + "导出失败！请检查是否为microsoft office2019及以下版本！", "提示");
             }
-          
+
         }
 
         //导出到excel-职工基本信息
@@ -1170,12 +1186,12 @@ namespace PWMS.PerForm
                     if (judge2 == 1)
                     {
                         FileInfo finfo = new FileInfo("D:\\PWMS\\EXCEL\\" + strInfo + ".xlsx");
-                      if(finfo.Exists)
+                        if (finfo.Exists)
                         {
                             finfo.Delete();
                             worksheet.SaveAs("D:\\PWMS\\EXCEL\\" + strInfo + ".xlsx", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
                         }
-                      else
+                        else
                         {
                             worksheet.SaveAs("D:\\PWMS\\EXCEL\\" + strInfo + ".xlsx", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
                         }
@@ -1186,7 +1202,7 @@ namespace PWMS.PerForm
                     }
                     workbook.Save();//保存工作表          
                 }
-                DialogResult result = MessageBox.Show("基本信息表导出到Excel成功，位置: D:\\PWMS\\EXCEL", "提示"); 
+                DialogResult result = MessageBox.Show("基本信息表导出到Excel成功，位置: D:\\PWMS\\EXCEL", "提示");
                 if (result == DialogResult.OK)
                 {
                     excel.Quit();
@@ -1245,54 +1261,68 @@ namespace PWMS.PerForm
         //修改-工作简历
         private void btn_wupdate_Click(object sender, EventArgs e)
         {
-            hold_n = 2;
-            Myformat.Ena_Button(btn_winsert, btn_wupdate, btn_wcancel, btn_wsave, 0, 0, 1, 1);
-            Myformat.allreadonly_work(gb_work.Controls, 5, true);
-            status_bar.Items[4].Text = "正在修改数据...";
-            btn_wdelete.Enabled = false;
-            dgv_show_work.Enabled = false;
-            dgv_show.Enabled = false;
-            gb_read.Enabled = false;
-            gb_select.Enabled = false;
+            if (dgv_show.Rows.Count > 0)
+            {
+                hold_n = 2;
+                Myformat.Ena_Button(btn_winsert, btn_wupdate, btn_wcancel, btn_wsave, 0, 0, 1, 1);
+                Myformat.allreadonly_work(gb_work.Controls, 5, true);
+                status_bar.Items[4].Text = "正在修改数据...";
+                btn_wdelete.Enabled = false;
+                dgv_show_work.Enabled = false;
+                dgv_show.Enabled = false;
+                gb_read.Enabled = false;
+                gb_select.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("当前无数据！", "提示");
+            }
         }
 
         //删除-工作简历
         private void btn_wdelete_Click(object sender, EventArgs e)
         {
-            status_bar.Items[4].Text = "正在删除数据...";
-            DialogResult result = MessageBox.Show("是否确认删除？", "提示", MessageBoxButtons.OKCancel);
-            if (dgv_show_work.CurrentRow.Index == 0)
+            if (dgv_show.Rows.Count > 0)
             {
-                MessageBox.Show("首条记录无法删除！", "提示");
-                status_bar.Items[4].Text = "无";
-                return;
-            }
-
-            if (dgv_show_work.CurrentRow.Index != dgv_show_work.Rows.Count - 1)
-            {
-                MessageBox.Show("无法从中删除，请选择修改！", "提示");
-                status_bar.Items[4].Text = "无";
-                return;
-            }
-
-            if (dgv_show_work.RowCount < 2)
-            {
-                MessageBox.Show("当前已是最后一条！无法删除！", "提示");
-                status_bar.Items[4].Text = "无";
-                return;
-            }
-            else
-            {
-                if (result == DialogResult.OK)
+                status_bar.Items[4].Text = "正在删除数据...";
+                DialogResult result = MessageBox.Show("是否确认删除？", "提示", MessageBoxButtons.OKCancel);
+                if (dgv_show_work.CurrentRow.Index == 0)
                 {
-                    MyDataClass.getsqlcom("Delete tb_WordResume where ID='" + dgv_show_work[1, dgv_show_work.CurrentCell.RowIndex].Value.ToString() + "'");
-                    btn_wcancel_Click(sender, e);
+                    MessageBox.Show("首条记录无法删除！", "提示");
+                    status_bar.Items[4].Text = "无";
+                    return;
+                }
+
+                if (dgv_show_work.CurrentRow.Index != dgv_show_work.Rows.Count - 1)
+                {
+                    MessageBox.Show("无法从中删除，请选择修改！", "提示");
+                    status_bar.Items[4].Text = "无";
+                    return;
+                }
+
+                if (dgv_show_work.RowCount < 2)
+                {
+                    MessageBox.Show("当前已是最后一条！无法删除！", "提示");
+                    status_bar.Items[4].Text = "无";
+                    return;
                 }
                 else
                 {
-                    MessageBox.Show("您选择了取消删除！", "提示");
-                    status_bar.Items[4].Text = "无";
+                    if (result == DialogResult.OK)
+                    {
+                        MyDataClass.getsqlcom("Delete tb_WordResume where ID='" + dgv_show_work[1, dgv_show_work.CurrentCell.RowIndex].Value.ToString() + "'");
+                        btn_wcancel_Click(sender, e);
+                    }
+                    else
+                    {
+                        MessageBox.Show("您选择了取消删除！", "提示");
+                        status_bar.Items[4].Text = "无";
+                    }
                 }
+            }
+            else
+            {
+                MessageBox.Show("当前无数据！", "提示");
             }
         }
 
@@ -1326,7 +1356,7 @@ namespace PWMS.PerForm
             string Work_Field = "Stu_ID,ID,BeginDate,EndDate,Branch,Business,WordUnit";
             if (hold_n == 1 || hold_n == 2)
             {
-                if (hold_n==2)
+                if (hold_n == 2)
                 {
                     if (dgv_show_work.RowCount < 1)
                     {
@@ -1359,7 +1389,7 @@ namespace PWMS.PerForm
 
             if (dgv_famliy.CurrentCell.RowIndex > -1)
             {
-                F_2.Text= DGrid[2, DGrid.CurrentCell.RowIndex].Value.ToString();
+                F_2.Text = DGrid[2, DGrid.CurrentCell.RowIndex].Value.ToString();
                 F_3.Text = DGrid[3, DGrid.CurrentCell.RowIndex].Value.ToString();
                 F_4.Text = Myformat.Date_Format(Convert.ToString(DGrid[4, DGrid.CurrentCell.RowIndex].Value).Trim());
                 F_5.Text = DGrid[5, DGrid.CurrentCell.RowIndex].Value.ToString();
@@ -1394,54 +1424,69 @@ namespace PWMS.PerForm
         //修改-家庭关系
         private void btn_fupdate_Click(object sender, EventArgs e)
         {
-            hold_n = 2;
-            Myformat.Ena_Button(btn_finsert, btn_fupdate, btn_fcancel, btn_fsave, 0, 0, 1, 1);
-            Myformat.allreadonly_work(gb_famliy.Controls, 7, true);
-            status_bar.Items[4].Text = "正在修改数据...";
-            btn_fdelete.Enabled = false;
-            dgv_famliy.Enabled = false;
-            dgv_show.Enabled = false;
-            gb_read.Enabled = false;
-            gb_select.Enabled = false;
+            if (dgv_show.Rows.Count > 0)
+            {
+                hold_n = 2;
+                Myformat.Ena_Button(btn_finsert, btn_fupdate, btn_fcancel, btn_fsave, 0, 0, 1, 1);
+                Myformat.allreadonly_work(gb_famliy.Controls, 7, true);
+                status_bar.Items[4].Text = "正在修改数据...";
+                btn_fdelete.Enabled = false;
+                dgv_famliy.Enabled = false;
+                dgv_show.Enabled = false;
+                gb_read.Enabled = false;
+                gb_select.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("当前无数据！", "提示");
+            }
+
         }
 
         //删除-家庭关系
         private void btn_fdelete_Click(object sender, EventArgs e)
         {
-            status_bar.Items[4].Text = "正在删除数据...";
-            DialogResult result = MessageBox.Show("是否确认删除？", "提示", MessageBoxButtons.OKCancel);
-            if (dgv_famliy.CurrentRow.Index == 0)
+            if (dgv_show.Rows.Count > 0)
             {
-                MessageBox.Show("首条记录无法删除！", "提示");
-                status_bar.Items[4].Text = "无";
-                return;
-            }
-
-            if (dgv_famliy.CurrentRow.Index != dgv_famliy.Rows.Count - 1)
-            {
-                MessageBox.Show("无法从中删除，请选择修改！", "提示");
-                status_bar.Items[4].Text = "无";
-                return;
-            }
-
-            if (dgv_famliy.RowCount < 2)
-            {
-                MessageBox.Show("当前已是最后一条！无法删除！", "提示");
-                status_bar.Items[4].Text = "无";
-                return;
-            }
-            else
-            {
-                if (result == DialogResult.OK)
+                status_bar.Items[4].Text = "正在删除数据...";
+                DialogResult result = MessageBox.Show("是否确认删除？", "提示", MessageBoxButtons.OKCancel);
+                if (dgv_famliy.CurrentRow.Index == 0)
                 {
-                    MyDataClass.getsqlcom("Delete tb_Family where ID='" + dgv_famliy[1, dgv_famliy.CurrentCell.RowIndex].Value.ToString() + "'");
-                    btn_fcancel_Click(sender, e);
+                    MessageBox.Show("首条记录无法删除！", "提示");
+                    status_bar.Items[4].Text = "无";
+                    return;
+                }
+
+                if (dgv_famliy.CurrentRow.Index != dgv_famliy.Rows.Count - 1)
+                {
+                    MessageBox.Show("无法从中删除，请选择修改！", "提示");
+                    status_bar.Items[4].Text = "无";
+                    return;
+                }
+
+                if (dgv_famliy.RowCount < 2)
+                {
+                    MessageBox.Show("当前已是最后一条！无法删除！", "提示");
+                    status_bar.Items[4].Text = "无";
+                    return;
                 }
                 else
                 {
-                    MessageBox.Show("您选择了取消删除！", "提示");
-                    status_bar.Items[4].Text = "无";
+                    if (result == DialogResult.OK)
+                    {
+                        MyDataClass.getsqlcom("Delete tb_Family where ID='" + dgv_famliy[1, dgv_famliy.CurrentCell.RowIndex].Value.ToString() + "'");
+                        btn_fcancel_Click(sender, e);
+                    }
+                    else
+                    {
+                        MessageBox.Show("您选择了取消删除！", "提示");
+                        status_bar.Items[4].Text = "无";
+                    }
                 }
+            }
+            else
+            {
+                MessageBox.Show("当前无数据！", "提示");
             }
         }
 
@@ -1509,7 +1554,7 @@ namespace PWMS.PerForm
 
             if (dgv_train.CurrentCell.RowIndex > -1)
             {
-                T_2.Text= DGrid[2, DGrid.CurrentCell.RowIndex].Value.ToString();
+                T_2.Text = DGrid[2, DGrid.CurrentCell.RowIndex].Value.ToString();
                 T_3.Text = Myformat.Date_Format(Convert.ToString(DGrid[3, DGrid.CurrentCell.RowIndex].Value).Trim());
                 T_4.Text = Myformat.Date_Format(Convert.ToString(DGrid[4, DGrid.CurrentCell.RowIndex].Value).Trim());
                 T_5.Text = DGrid[5, DGrid.CurrentCell.RowIndex].Value.ToString();
@@ -1545,54 +1590,68 @@ namespace PWMS.PerForm
         //修改-培训记录
         private void btn_tupdate_Click(object sender, EventArgs e)
         {
-            hold_n = 2;
-            Myformat.Ena_Button(btn_tinsert, btn_tupdate, btn_tcancel, btn_tsave, 0, 0, 1, 1);
-            Myformat.allreadonly_work(gb_train.Controls, 8, true);
-            status_bar.Items[4].Text = "正在修改数据...";
-            btn_tdelete.Enabled = false;
-            dgv_train.Enabled = false;
-            dgv_show.Enabled = false;
-            gb_read.Enabled = false;
-            gb_select.Enabled = false;
+            if (dgv_show.Rows.Count > 0)
+            {
+                hold_n = 2;
+                Myformat.Ena_Button(btn_tinsert, btn_tupdate, btn_tcancel, btn_tsave, 0, 0, 1, 1);
+                Myformat.allreadonly_work(gb_train.Controls, 8, true);
+                status_bar.Items[4].Text = "正在修改数据...";
+                btn_tdelete.Enabled = false;
+                dgv_train.Enabled = false;
+                dgv_show.Enabled = false;
+                gb_read.Enabled = false;
+                gb_select.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("当前无数据！", "提示");
+            }
         }
 
         //删除-培训记录
         private void btn_tdelete_Click(object sender, EventArgs e)
         {
-            status_bar.Items[4].Text = "正在删除数据...";
-            DialogResult result = MessageBox.Show("是否确认删除？", "提示", MessageBoxButtons.OKCancel);
-            if (dgv_train.CurrentRow.Index == 0)
+            if (dgv_show.Rows.Count > 0)
             {
-                MessageBox.Show("首条记录无法删除！", "提示");
-                status_bar.Items[4].Text = "无";
-                return;
-            }
-
-            if (dgv_train.CurrentRow.Index != dgv_train.Rows.Count - 1)
-            {
-                MessageBox.Show("无法从中删除，请选择修改！", "提示");
-                status_bar.Items[4].Text = "无";
-                return;
-            }
-
-            if (dgv_train.RowCount < 2)
-            {
-                MessageBox.Show("当前已是最后一条！无法删除！", "提示");
-                status_bar.Items[4].Text = "无";
-                return;
-            }
-            else
-            {
-                if (result == DialogResult.OK)
+                status_bar.Items[4].Text = "正在删除数据...";
+                DialogResult result = MessageBox.Show("是否确认删除？", "提示", MessageBoxButtons.OKCancel);
+                if (dgv_train.CurrentRow.Index == 0)
                 {
-                    MyDataClass.getsqlcom("Delete tb_TrainNote where ID='" + dgv_train[1, dgv_train.CurrentCell.RowIndex].Value.ToString() + "'");
-                    btn_tcancel_Click(sender, e);
+                    MessageBox.Show("首条记录无法删除！", "提示");
+                    status_bar.Items[4].Text = "无";
+                    return;
+                }
+
+                if (dgv_train.CurrentRow.Index != dgv_train.Rows.Count - 1)
+                {
+                    MessageBox.Show("无法从中删除，请选择修改！", "提示");
+                    status_bar.Items[4].Text = "无";
+                    return;
+                }
+
+                if (dgv_train.RowCount < 2)
+                {
+                    MessageBox.Show("当前已是最后一条！无法删除！", "提示");
+                    status_bar.Items[4].Text = "无";
+                    return;
                 }
                 else
                 {
-                    MessageBox.Show("您选择了取消删除！", "提示");
-                    status_bar.Items[4].Text = "无";
+                    if (result == DialogResult.OK)
+                    {
+                        MyDataClass.getsqlcom("Delete tb_TrainNote where ID='" + dgv_train[1, dgv_train.CurrentCell.RowIndex].Value.ToString() + "'");
+                        btn_tcancel_Click(sender, e);
+                    }
+                    else
+                    {
+                        MessageBox.Show("您选择了取消删除！", "提示");
+                        status_bar.Items[4].Text = "无";
+                    }
                 }
+            }
+            else
+            {
+                MessageBox.Show("当前无数据！", "提示");
             }
         }
 
@@ -1657,10 +1716,10 @@ namespace PWMS.PerForm
         {
             Myformat.Ena_Button(btn_rinsert, btn_rupdate, btn_rcancel, btn_rsave, 1, 1, 0, 0);
             Myformat.allreadonly_work(gb_reward.Controls, 5, false);
-            
+
             if (dgv_reward.CurrentCell.RowIndex > -1)
             {
-                R_2.Text= DGrid[2, DGrid.CurrentCell.RowIndex].Value.ToString();
+                R_2.Text = DGrid[2, DGrid.CurrentCell.RowIndex].Value.ToString();
                 R_3.Text = Myformat.Date_Format(Convert.ToString(DGrid[3, DGrid.CurrentCell.RowIndex].Value).Trim());
                 R_4.Text = DGrid[4, DGrid.CurrentCell.RowIndex].Value.ToString();
                 R_5.Text = Myformat.Date_Format(Convert.ToString(DGrid[5, DGrid.CurrentCell.RowIndex].Value).Trim());
@@ -1693,54 +1752,69 @@ namespace PWMS.PerForm
         //修改-培训记录
         private void btn_rupdate_Click(object sender, EventArgs e)
         {
-            hold_n = 2;
-            Myformat.Ena_Button(btn_tinsert, btn_rupdate, btn_rcancel, btn_rsave, 0, 0, 1, 1);
-            Myformat.allreadonly_work(gb_reward.Controls, 5, true);
-            status_bar.Items[4].Text = "正在修改数据...";
-            btn_rdelete.Enabled = false;
-            dgv_reward.Enabled = false;
-            dgv_show.Enabled = false;
-            gb_read.Enabled = false;
-            gb_select.Enabled = false;
+            if (dgv_show.Rows.Count > 0)
+            {
+                hold_n = 2;
+                Myformat.Ena_Button(btn_tinsert, btn_rupdate, btn_rcancel, btn_rsave, 0, 0, 1, 1);
+                Myformat.allreadonly_work(gb_reward.Controls, 5, true);
+                status_bar.Items[4].Text = "正在修改数据...";
+                btn_rdelete.Enabled = false;
+                dgv_reward.Enabled = false;
+                dgv_show.Enabled = false;
+                gb_read.Enabled = false;
+                gb_select.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("当前无数据！", "提示");
+            }
+
         }
 
         //删除-培训记录
         private void btn_rdelete_Click(object sender, EventArgs e)
         {
-            status_bar.Items[4].Text = "正在删除数据...";
-            DialogResult result = MessageBox.Show("是否确认删除？", "提示", MessageBoxButtons.OKCancel);
-            if (dgv_reward.CurrentRow.Index == 0)
+            if (dgv_show.Rows.Count > 0)
             {
-                MessageBox.Show("首条记录无法删除！", "提示");
-                status_bar.Items[4].Text = "无";
-                return;
-            }
-
-            if (dgv_reward.CurrentRow.Index != dgv_reward.Rows.Count - 1)
-            {
-                MessageBox.Show("无法从中删除，请选择修改！", "提示");
-                status_bar.Items[4].Text = "无";
-                return;
-            }
-
-            if (dgv_reward.RowCount < 2)
-            {
-                MessageBox.Show("当前已是最后一条！无法删除！", "提示");
-                status_bar.Items[4].Text = "无";
-                return;
-            }
-            else
-            {
-                if (result == DialogResult.OK)
+                status_bar.Items[4].Text = "正在删除数据...";
+                DialogResult result = MessageBox.Show("是否确认删除？", "提示", MessageBoxButtons.OKCancel);
+                if (dgv_reward.CurrentRow.Index == 0)
                 {
-                    MyDataClass.getsqlcom("Delete tb_RANDP where ID='" + dgv_reward[1, dgv_reward.CurrentCell.RowIndex].Value.ToString() + "'");
-                    btn_rcancel_Click(sender, e);
+                    MessageBox.Show("首条记录无法删除！", "提示");
+                    status_bar.Items[4].Text = "无";
+                    return;
+                }
+
+                if (dgv_reward.CurrentRow.Index != dgv_reward.Rows.Count - 1)
+                {
+                    MessageBox.Show("无法从中删除，请选择修改！", "提示");
+                    status_bar.Items[4].Text = "无";
+                    return;
+                }
+
+                if (dgv_reward.RowCount < 2)
+                {
+                    MessageBox.Show("当前已是最后一条！无法删除！", "提示");
+                    status_bar.Items[4].Text = "无";
+                    return;
                 }
                 else
                 {
-                    MessageBox.Show("您选择了取消删除！", "提示");
-                    status_bar.Items[4].Text = "无";
+                    if (result == DialogResult.OK)
+                    {
+                        MyDataClass.getsqlcom("Delete tb_RANDP where ID='" + dgv_reward[1, dgv_reward.CurrentCell.RowIndex].Value.ToString() + "'");
+                        btn_rcancel_Click(sender, e);
+                    }
+                    else
+                    {
+                        MessageBox.Show("您选择了取消删除！", "提示");
+                        status_bar.Items[4].Text = "无";
+                    }
                 }
+            }
+            else
+            {
+                MessageBox.Show("当前无数据！", "提示");
             }
         }
 
@@ -1806,7 +1880,7 @@ namespace PWMS.PerForm
             status_bar.Items[4].Text = "正在保存数据...";
             Myformat.pcbusing(pcb_basic, 0, 100, 20);
             SqlDataReader Read_Memo = MyDataClass.getcom("Select * from tb_Individual where ID='" + tem_ID + "'");
-            if (Read_Memo.Read())           
+            if (Read_Memo.Read())
                 MyDataClass.getsqlcom("update tb_Individual set Memo='" + Ind_Mome.Text + "' where ID='" + tem_ID + "'");
             else
                 MyDataClass.getsqlcom("insert into tb_Individual (ID,Memo) values('" + tem_ID + "','" + Ind_Mome.Text + "')");
