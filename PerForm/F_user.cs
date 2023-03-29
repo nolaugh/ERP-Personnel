@@ -68,10 +68,22 @@ namespace PWMS.PerForm
             f_Enroll.Dispose();
         }
 
+        //修改
         private void btn_update_Click(object sender, EventArgs e)
         {
-
-
+            if (dgv_user.CurrentRow.Index < 2)
+            {
+                MessageBox.Show("不能修改超级用户 !", "提示");
+                return;
+            }
+            else
+            {
+                ModuleClass.MyModule.User_Name = dgv_user[0, dgv_user.CurrentCell.RowIndex].Value.ToString();
+                SecondaryForm.F_UpdateUser f_UpdateUser = new SecondaryForm.F_UpdateUser();
+                f_UpdateUser.ShowDialog();
+                f_UpdateUser.Dispose();
+            }
+           
         }
 
         //权限修改
@@ -109,7 +121,7 @@ namespace PWMS.PerForm
                 case "取消权限":
                     if (dgv_user.Rows.Count > 0)
                     {
-                        if (dgv_user.CurrentRow.Index < 3)
+                        if (dgv_user.CurrentRow.Index < 2)
                         {
                             MessageBox.Show("当前用户为超级管理员，无法修改！", " 提示");
                             return;
