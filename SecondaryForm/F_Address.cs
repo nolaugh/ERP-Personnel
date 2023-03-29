@@ -25,6 +25,7 @@ namespace PWMS.SecondaryForm
         //加载
         private void F_Address_Load(object sender, EventArgs e)
         {
+            this.MaximizeBox = false;
             if ((int)(this.Tag) == 1)
             {
                 Address_ID = MyMC.GetAutocoding("tb_AddressBook", "ID");

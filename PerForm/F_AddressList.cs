@@ -46,6 +46,7 @@ namespace PWMS.PerForm
         //加载
         private void F_AddressList_Load(object sender, EventArgs e)
         {
+            this.MaximizeBox = false;
             ShowAll();
         }
 

@@ -151,11 +151,11 @@
     <Compile Include="SecondaryForm\F_Basic.Designer.cs">
       <DependentUpon>F_Basic.cs</DependentUpon>
     </Compile>
-    <Compile Include="SecondaryForm\F_ClewSet.cs">
+    <Compile Include="SecondaryForm\F_UpdateUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SecondaryForm\F_ClewSet.Designer.cs">
-      <DependentUpon>F_ClewSet.cs</DependentUpon>
+    <Compile Include="SecondaryForm\F_UpdateUser.Designer.cs">
+      <DependentUpon>F_UpdateUser.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="F_Login.resx">
       <DependentUpon>F_Login.cs</DependentUpon>
@@ -204,8 +204,8 @@
     <EmbeddedResource Include="SecondaryForm\F_Basic.resx">
       <DependentUpon>F_Basic.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SecondaryForm\F_ClewSet.resx">
-      <DependentUpon>F_ClewSet.cs</DependentUpon>
+    <EmbeddedResource Include="SecondaryForm\F_UpdateUser.resx">
+      <DependentUpon>F_UpdateUser.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

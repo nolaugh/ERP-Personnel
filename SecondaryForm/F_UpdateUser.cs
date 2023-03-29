@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace PWMS.SecondaryForm
 {
-    public partial class F_ClewSet : Form
+    public partial class F_UpdateUser : Form
     {
-        public F_ClewSet()
+        public F_UpdateUser()
         {
             InitializeComponent();
+        }
+
+        private void F_UpdateUser_Load(object sender, EventArgs e)
+        {
+             this.MaximizeBox = false;
         }
     }
 }

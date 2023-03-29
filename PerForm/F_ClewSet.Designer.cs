@@ -159,6 +159,7 @@
             this.col_StuffName.HeaderText = "员工姓名";
             this.col_StuffName.MinimumWidth = 6;
             this.col_StuffName.Name = "col_StuffName";
+            this.col_StuffName.Width = 125;
             // 
             // col_day
             // 
@@ -178,6 +179,7 @@
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.gb_message);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "F_ClewSet";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

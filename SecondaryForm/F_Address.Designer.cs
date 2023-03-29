@@ -247,6 +247,7 @@
             this.ClientSize = new System.Drawing.Size(534, 223);
             this.Controls.Add(this.gb_use);
             this.Controls.Add(this.gb_connect);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "F_Address";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.F_Address_Load);

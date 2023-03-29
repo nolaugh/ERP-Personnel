@@ -54,7 +54,7 @@ namespace PWMS
             }
             else
             {
-                MessageBox.Show("当前用户无权限使用！","提示");
+                MessageBox.Show("当前用户无权限使用！请用管理员账号登录修改！","提示");
             }
         }
 
@@ -69,7 +69,7 @@ namespace PWMS
             }
             else
             {
-                MessageBox.Show("当前用户无权限使用！", "提示");
+                MessageBox.Show("当前用户无权限使用！请用管理员账号登录修改！！", "提示");
             }
         }
 
@@ -84,7 +84,7 @@ namespace PWMS
             }
             else
             {
-                MessageBox.Show("当前用户无权限使用！", "提示");
+                MessageBox.Show("当前用户无权限使用！请用管理员账号登录修改！！", "提示");
             }
         }
 
@@ -99,7 +99,7 @@ namespace PWMS
             }
             else
             {
-                MessageBox.Show("当前用户无权限使用！", "提示");
+                MessageBox.Show("当前用户无权限使用！请用管理员账号登录修改！！", "提示");
             }
         }
 
@@ -114,7 +114,7 @@ namespace PWMS
             }
             else
             {
-                MessageBox.Show("当前用户无权限使用！", "提示");
+                MessageBox.Show("当前用户无权限使用！请用管理员账号登录修改！！", "提示");
             }
         }
 

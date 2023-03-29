@@ -180,6 +180,7 @@ namespace PWMS
             lbl_warning.Text = "";
         }
 
+        //退出
         private void lbl_exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
