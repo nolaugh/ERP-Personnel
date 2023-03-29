@@ -149,10 +149,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 402);
+            this.ClientSize = new System.Drawing.Size(484, 398);
             this.Controls.Add(this.gb_manage);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gb_use);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "F_user";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "用户设置";
