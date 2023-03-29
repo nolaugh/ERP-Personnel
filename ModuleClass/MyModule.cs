@@ -983,7 +983,7 @@ namespace PWMS.ModuleClass
                                         }
                                     }
                             }
-                            if (m_Sgin != "")   //当该务件不为空时
+                            if (m_Sgin != "")   //当该控件件不为空时
                                 FindValue = FindValue + "(" + mID + m_Sgin + C.Text + ")" + ANDSign;    //组合SQL语句的查询条件
                         }
                     }
@@ -1032,7 +1032,7 @@ namespace PWMS.ModuleClass
 
             }
             #endregion
-            //-------------------------------F_ClewSet
+        //-------------------------------F_ClewSet
 
         } 
     } 
