@@ -228,12 +228,6 @@ namespace PWMS
             MyMenu.Show_form(sender.ToString(), 3);
         }
 
-        //清空数据库功能
-        private void 清空数据库ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MyMenu.Show_form(sender.ToString(), 3);
-        }
-
         //记事本功能
         private void 记事本ToolStripMenuItem_Click(object sender, EventArgs e)
         {
