@@ -13,7 +13,8 @@
 注：在第五条中的项目介绍文档有项目的图片及设计流程图，此处贴出部分    
 ![image](https://user-images.githubusercontent.com/30466608/230086098-9d07d203-19b3-4357-8021-a6d47bb7ddf2.png)
 ![image](https://user-images.githubusercontent.com/30466608/230086343-f2ad4591-e902-4408-80b5-96d0756cbda0.png)
-![image](https://user-images.githubusercontent.com/30466608/230086172-66513708-56e1-457c-85bf-8632ee99b754.png)  
+![image](https://user-images.githubusercontent.com/30466608/230086172-66513708-56e1-457c-85bf-8632ee99b754.png)
+![image](https://user-images.githubusercontent.com/30466608/230086516-0ab96bc7-2f46-4cbb-8229-1f6bdac60d3e.png)  
 一、登录模块  
 二、主界面  
 人事档案管理、人事资料查询、员工合同提示、通讯录、  
