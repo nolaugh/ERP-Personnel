@@ -34,6 +34,28 @@
 提供了日常记事等操作  
 ![image](https://user-images.githubusercontent.com/30466608/230006180-91fc3609-fbaa-40c8-b2ea-a9f9dd3a3f3e.png)  
 八、基础数据修改  
+提供了基础数据修改等操作  
+![image](https://user-images.githubusercontent.com/30466608/230008687-0eb7ca1b-564c-4a4b-9381-1ff9a217c8e1.png)  
+![image](https://user-images.githubusercontent.com/30466608/230008739-c7f9bb12-e0c2-42c3-88c3-d5ef2dda5d3e.png)
+九、人事资料统计  
+提供了人事资料统计等操作  
+![image](https://user-images.githubusercontent.com/30466608/230008883-8ff571fd-1dbf-4546-aa80-84c20ec2036a.png)
+十、数据备份/还原  
+提供了数据库备份还原等操作  
+![image](https://user-images.githubusercontent.com/30466608/230009004-daa6f92f-6c34-47c8-a01b-7c9f641b0d9f.png)  
+![image](https://user-images.githubusercontent.com/30466608/230009027-58532f7b-4446-482b-9dbe-0186b41e932a.png)  
+十一、工具管理  
+提供了快捷调用系统的计算机计算机/记事本等操作  
+十二、用户设置  
+提供了用户权限修改等操作  
+![image](https://user-images.githubusercontent.com/30466608/230009342-dd7b175e-41e9-4e04-a626-88bba04a0bed.png)  
+十三、系统帮助  
+提供了系统帮助的联系邮箱操作
+
+
+
+
+
 
 
 
