@@ -19,7 +19,8 @@
 ![image](https://user-images.githubusercontent.com/30466608/230004933-1c9c6183-cb09-4002-a1bf-e6355d1fa7ab.png)  
 三、人事档案管理模块  
 提供了职工基本信息（支持word/excel批量导出）、工作简历、家庭关系、培训记录、奖惩记录、个人评价等操作  
-![image](https://user-images.githubusercontent.com/30466608/230004096-00427778-54c9-493a-93bf-1ac7f6ea6f17.png)![image](https://user-images.githubusercontent.com/30466608/230005081-2686dd8c-baec-478f-a60c-871d45550484.png)  
+![image](https://user-images.githubusercontent.com/30466608/230004096-00427778-54c9-493a-93bf-1ac7f6ea6f17.png)  
+![image](https://user-images.githubusercontent.com/30466608/230005081-2686dd8c-baec-478f-a60c-871d45550484.png)  
 四、人事资料查询模块  
 提供了人事查询等操作  
 ![image](https://user-images.githubusercontent.com/30466608/230005477-28338b0a-9421-4ca7-ab58-75b56fe084f5.png)  
@@ -36,10 +37,10 @@
 八、基础数据修改  
 提供了基础数据修改等操作  
 ![image](https://user-images.githubusercontent.com/30466608/230008687-0eb7ca1b-564c-4a4b-9381-1ff9a217c8e1.png)  
-![image](https://user-images.githubusercontent.com/30466608/230008739-c7f9bb12-e0c2-42c3-88c3-d5ef2dda5d3e.png)
+![image](https://user-images.githubusercontent.com/30466608/230008739-c7f9bb12-e0c2-42c3-88c3-d5ef2dda5d3e.png)  
 九、人事资料统计  
 提供了人事资料统计等操作  
-![image](https://user-images.githubusercontent.com/30466608/230008883-8ff571fd-1dbf-4546-aa80-84c20ec2036a.png)
+![image](https://user-images.githubusercontent.com/30466608/230008883-8ff571fd-1dbf-4546-aa80-84c20ec2036a.png)  
 十、数据备份/还原  
 提供了数据库备份还原等操作  
 ![image](https://user-images.githubusercontent.com/30466608/230009004-daa6f92f-6c34-47c8-a01b-7c9f641b0d9f.png)  
