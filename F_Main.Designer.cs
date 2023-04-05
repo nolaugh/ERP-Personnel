@@ -64,7 +64,6 @@
             this.人事资料统计ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.数据库维护ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.备份还原数据库ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.清空数据库ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.工具管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.记事本ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.记事本ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -374,8 +373,7 @@
             // 数据库维护ToolStripMenuItem
             // 
             this.数据库维护ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.备份还原数据库ToolStripMenuItem,
-            this.清空数据库ToolStripMenuItem});
+            this.备份还原数据库ToolStripMenuItem});
             this.数据库维护ToolStripMenuItem.Name = "数据库维护ToolStripMenuItem";
             this.数据库维护ToolStripMenuItem.Size = new System.Drawing.Size(98, 24);
             this.数据库维护ToolStripMenuItem.Text = "数据库维护";
@@ -383,16 +381,9 @@
             // 备份还原数据库ToolStripMenuItem
             // 
             this.备份还原数据库ToolStripMenuItem.Name = "备份还原数据库ToolStripMenuItem";
-            this.备份还原数据库ToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
+            this.备份还原数据库ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.备份还原数据库ToolStripMenuItem.Text = "备份/还原数据库";
             this.备份还原数据库ToolStripMenuItem.Click += new System.EventHandler(this.备份还原数据库ToolStripMenuItem_Click);
-            // 
-            // 清空数据库ToolStripMenuItem
-            // 
-            this.清空数据库ToolStripMenuItem.Name = "清空数据库ToolStripMenuItem";
-            this.清空数据库ToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
-            this.清空数据库ToolStripMenuItem.Text = "清空数据库";
-            this.清空数据库ToolStripMenuItem.Click += new System.EventHandler(this.清空数据库ToolStripMenuItem_Click);
             // 
             // 工具管理ToolStripMenuItem
             // 
@@ -569,7 +560,6 @@
         private System.Windows.Forms.ToolStripMenuItem 日常记事ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 通讯录ToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem 备份还原数据库ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 清空数据库ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 记事本ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 记事本ToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem 用户设置ToolStripMenuItem;

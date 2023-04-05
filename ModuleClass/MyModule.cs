@@ -204,14 +204,6 @@ namespace PWMS.ModuleClass
                     f_HaveBack.Dispose();
                 }
 
-                if (FrmName == "清空数据库")
-                {
-                    PerForm.F_ClearData f_ClearData = new PWMS.PerForm.F_ClearData();
-                    f_ClearData.Text = "清空数据库";
-                    f_ClearData.ShowDialog();
-                    f_ClearData.Dispose();
-                }
-
                 if (FrmName == "计算器")
                 {
                     try

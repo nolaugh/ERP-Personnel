@@ -84,16 +84,10 @@
     <Compile Include="PerForm\F_AddressList.Designer.cs">
       <DependentUpon>F_AddressList.cs</DependentUpon>
     </Compile>
-    <Compile Include="PerForm\F_ClearData.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PerForm\F_ClearData.Designer.cs">
-      <DependentUpon>F_ClearData.cs</DependentUpon>
-    </Compile>
     <Compile Include="PerForm\F_ClewSet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PerForm\F_ClewSet.Designer.cs">
+    <Compile Include="PerForm\F_ClewSet.designer.cs">
       <DependentUpon>F_ClewSet.cs</DependentUpon>
     </Compile>
     <Compile Include="PerForm\F_Find.cs">
@@ -168,9 +162,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PerForm\F_AddressList.resx">
       <DependentUpon>F_AddressList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PerForm\F_ClearData.resx">
-      <DependentUpon>F_ClearData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PerForm\F_ClewSet.resx">
       <DependentUpon>F_ClewSet.cs</DependentUpon>
