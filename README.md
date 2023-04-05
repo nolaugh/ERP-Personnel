@@ -9,7 +9,7 @@
 3.欢迎用以借鉴，有任何问题可以联系本人邮箱：chenyandusts@gmail.com  
 4.数据库在DataBase文件夹中，内含完整的数据库的[部署文档以及数据库的表设计](https://github.com/nolaugh/ERP-Personnel/tree/master/DataBase)    
 5.完整的[项目介绍文档](https://github.com/nolaugh/ERP-Personnel/tree/master/%E5%AE%8C%E6%95%B4%E4%BC%81%E4%B8%9A%E4%BA%BA%E4%BA%8B%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E4%BB%8B%E7%BB%8D%E6%96%87%E6%A1%A3)点击链接跳转可以查看完整的企业人事管理系统项目文档  
-//----------------------------------------以下为项目的主要部分介绍----------------------------------------  
+//--------以下为项目的主要部分介绍--------  
 一、登录模块  
 二、主界面  
 人事档案管理、人事资料查询、员工合同提示、通讯录、  
