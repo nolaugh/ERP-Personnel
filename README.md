@@ -25,7 +25,19 @@
 ![image](https://user-images.githubusercontent.com/30466608/230005477-28338b0a-9421-4ca7-ab58-75b56fe084f5.png)  
 五、员工合同提示模块  
 提供了员工合同提示等操作  
-![image](https://user-images.githubusercontent.com/30466608/230005629-75d46e97-72d7-4e05-b2b5-700300434691.png)
+![image](https://user-images.githubusercontent.com/30466608/230005629-75d46e97-72d7-4e05-b2b5-700300434691.png)  
+六、通讯录模块  
+提供了通讯录等操作  
+![image](https://user-images.githubusercontent.com/30466608/230005954-0763487e-7571-4cf9-b759-3b6c0b6f601e.png)  
+![image](https://user-images.githubusercontent.com/30466608/230005999-5178d43f-9bb2-4f98-b8a5-e2fee5a76f84.png)  
+七、日常记事模块
+提供了日常记事等操作  
+![image](https://user-images.githubusercontent.com/30466608/230006180-91fc3609-fbaa-40c8-b2ea-a9f9dd3a3f3e.png)  
+八、基础数据修改  
+
+
+
+
 
 
 
