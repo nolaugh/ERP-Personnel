@@ -9,6 +9,9 @@
 3.欢迎用以借鉴，有任何问题可以联系本人邮箱：chenyandusts@gmail.com。  
 4.数据库在DataBase文件夹中，内含完整的数据库的[部署文档以及数据库的表设计](https://github.com/nolaugh/ERP-Personnel/tree/master/DataBase)。  
 //----------------------------------------以下为项目的主要部分介绍----------------------------------------
-
+一、登录模块  
+提供了用户登录及注册功能模块
+![image](https://user-images.githubusercontent.com/30466608/229998834-fc7f4d8e-eddc-4cd6-b92c-ca611fdd42cf.png)  
+![image](https://user-images.githubusercontent.com/30466608/229998865-9fdcff3d-8a73-45a1-a0c7-a8c3dfbf76ad.png)  
 
 
